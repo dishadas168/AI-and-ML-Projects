@@ -18,7 +18,7 @@ path to a goal pose. The primary objective of this project is to avoid coming in
 contact with obstacles under different scenarios.  
 
 
-**Project Contribution**
+**Project Contribution**  
 The two main goals performed by the manipulator with stationary base are :  
 - **End-Effector Motion** - The redundant manipulator’s end-effector should reach
 the desired final destination from a given initial position.  
@@ -27,10 +27,10 @@ path traversed without colliding. We assume that the links of manipulator arm
 are not counted as obstacles, so they are free to overlap.  
 
 The above goals were achieved for the following scenarios:  
-• Scenario I : End-effector motion in the absence of obstacles
-• Scenario II : Manipulator arm motion disturbed by the stationary obstacle
-• Scenario III : End-effector motion disturbed by the stationary obstacle
-• Scenario IV : Manipulator motion disturbed by moving obstacle  
+• Scenario I : End-effector motion in the absence of obstacles  
+• Scenario II : Manipulator arm motion disturbed by the stationary obstacle  
+• Scenario III : End-effector motion disturbed by the stationary obstacle  
+• Scenario IV : Manipulator motion disturbed by moving obstacle    
 
 **Results**  
 The algorithm is evaluated based on four scenarios. For the sake of simplicity,
@@ -41,13 +41,10 @@ we vary the alpha value.
 
 The algorithm was repeated multiple times using random positions of the goal
 pose, random initial joint angles and random centres of the obstacle. The results of this experiment are presented in table 1. The two variables we consider
-are- whether collision occurs and whether the end-effector reaches the goal pose.  
+are- whether collision occurs and whether the end-effector reaches the goal pose.    
 
-**Scenario 1:** In the first scenario, no obstacle is present. This scenario gives
-an estimate of the natural path of the end-effector in the absence of obstacles.
-Any deviations from this path will be evaluated in the subsequent scenarios.
-For the no obstacle scenario, the plot in Figure 1 is a linear one, given the value
-of alpha is 1.   
+**Scenario 1:** In the first scenario, no obstacle is present. This scenario gives an estimate of the natural path of the end-effector in the absence of obstacles. Any deviations from this path will be evaluated in the subsequent scenarios. For the no obstacle scenario, the plot in Figure 1 is a linear one, given the value of alpha is 1.   
+![no_obs](Images and plots/no_obstacle_alpha_1.gif)  
 
 **Scenario 2:** In this scenario, an obstacle is placed in a position so as to make
 the manipulator go around it to reach the goal pose. The manipulator is successful in reaching the goal while avoiding the obstacle, as can be observed in
