@@ -8,10 +8,12 @@ In this project, we executed trajectory optimization of a spider robot model usi
 **Building a realistic spider model SDF**  
 The Spider robot model we had previously consisted of a cylindrical base surrounded by 8 evenly spaced limbs. The base of the spider was made into a head, thorax and abdomen regions. The origin of the limbs were placed appropriately along the body of the spider. The lengths of the limb-links were varied to fit the proportions of the sections of a real spider limb.  
 ![prev](spider_puck.JPG)  
+
+
 ![new](spider_new.png)  
 
 **Walking with Pre-defined footholds**  
-The first gait movement consisted of moving a limb at a time in sequence. The gait consisted of 9 phases. The first was a stationary phase where the spider is stationary. In the next 8 phases, the spider moves a limb starting from the first to the eighth. At each phase except the stationary phase, the contact point with the ground of a limb was given a point goal. A positive y-axis value was added to the current contact point position in (x,y,z) coordinates to generate the next contact point goal.
+The first gait movement consisted of moving a limb at a time in sequence. The gait consisted of 9 phases. The first was a stationary phase where the spider is stationary. In the next 8 phases, the spider moves a limb starting from the first to the eighth. At each phase except the stationary phase, the contact point with the ground of a limb was given a point goal. A positive y-axis value was added to the current contact point position in (x,y,z) coordinates to generate the next contact point goal.  
 
 **Creating a Tetrapod Walk**  
 For a realistic spider walk, we created the tetrapod walk. This consists of 2 phases being alternated a few times. The first phase consisted of a forward motion of even legs of the spider. At this phase, we added contact point goals to even legs of the spider. These goal positions were created by adding a positive value along y-axis to the current contact point position. The next phase consists of movement of the odd legs only. This was similarly implemented.  
@@ -31,8 +33,8 @@ Once the spider was successfully propelling its body forward without allowing th
 In the process of trajectory optimization, a few classes were created relating to Phase implementations in a trajectory.
 Given below is a description of each of these classes:  
 
-Phase: A Phase class contains information regarding the stance of a robot. For example, a stationary stance is a phase where all the limbs are in contact with the ground. Similarly, a stance with even legs lifted up is a phase that has information regarding the positions of the odd legs that are still in contact with the ground.
+Phase: A Phase class contains information regarding the stance of a robot. For example, a stationary stance is a phase where all the limbs are in contact with the ground. Similarly, a stance with even legs lifted up is a phase that has information regarding the positions of the odd legs that are still in contact with the ground.  
 
 WalkCycle: A WalkCycle class stores information regarding a sequence of Phase objects. Following the above example, a WalkCycle object called "tetrapod walk” would consist of the following sequence of Phase objects- stationary, even legs stance, stationary, odd legs stance.  
 
-Trajectory: A Trajectory class contains information regarding a WalkCycle and the number of times it is repeated. 
+Trajectory: A Trajectory class contains information regarding a WalkCycle and the number of times it is repeated.  
