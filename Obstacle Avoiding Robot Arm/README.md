@@ -44,24 +44,40 @@ pose, random initial joint angles and random centres of the obstacle. The result
 are- whether collision occurs and whether the end-effector reaches the goal pose.    
 
 **Scenario 1:** In the first scenario, no obstacle is present. This scenario gives an estimate of the natural path of the end-effector in the absence of obstacles. Any deviations from this path will be evaluated in the subsequent scenarios. For the no obstacle scenario, the plot in Figure 1 is a linear one, given the value of alpha is 1.   
-![no_obs](Images and plots/no_obstacle_alpha_1.gif)  
+![no_obs](GIFs/no_obstacle_alpha_1.gif)    
+![fig1](Plots/scenario1_a1.PNG)  
 
-**Scenario 2:** In this scenario, an obstacle is placed in a position so as to make
-the manipulator go around it to reach the goal pose. The manipulator is successful in reaching the goal while avoiding the obstacle, as can be observed in
-the results. The distance vs frame plots in Figure 2 are given for values of alpha
-1, 0.5 and 0.05.  
+**Scenario 2:** In this scenario, an obstacle is placed in a position so as to make the manipulator go around it to reach the goal pose. The manipulator is successful in reaching the goal while avoiding the obstacle, as can be observed in the results. The distance vs frame plots in Figure 2 are given for values of alpha 1, 0.5 and 0.05.  
+![stat_obs](GIFs/stat_obstacle_alpha_1.gif)    
+![stat_obs](GIFs/stat_obstacle_alpha_0.5.gif)  
+![stat_obs](GIFs/stat_obstacle_alpha_0.05.gif)  
+![fig2](Plots/scenario2_all.PNG)  
 
 **Scenario 3:** In this scenario, an obstacle is placed directly on the path of
 the end-effector. The end-effector successfully reaches the goal pose after deviating from its path, just enough to avoid the obstacle. The distance vs frame
 plots in Figure 3 are given for values of alpha 1, 0.5 and 0.05.  
+![path_obs](GIFs/path_obstacle_alpha_1.gif)    
+![path_obs](GIFs/path_obstacle_alpha_0.5.gif)  
+![path_obs](GIFs/path_obstacle_alpha_0.05.gif)  
+![fig3](Plots/scenario3_all.PNG)  
 
 **Scenario 4:** This scenario consists of two runs of the program. In the first
 run, a moving obstacle is orchestrated to move diagonally such that it doesn’t
 cross the path of the end-effector. The movement of the manipulator is given
-for values of alpha 3, 1 and 0.5 (See Figure 4). In run 2, the moving obstacle
-is made to cross the path of the end-effector. This time the program takes the
-alpha values 2, 1 and 0.5 (See Figure 5).  
+for values of alpha 3, 1 and 0.5 (See Figure 4).  
+![mov_obs](GIFs/mov_obstacle_alpha_3.gif)    
+![mov_obs](GIFs/mov_obstacle_alpha_1.gif)  
+![mov_obs](GIFs/mov_obstacle_alpha_0.5.gif)  
+![fig4_1](Plots/scenario4_1_all.PNG)  
+
+In run 2, the moving obstacle is made to cross the path of the end-effector. This time the program takes the alpha values 2, 1 and 0.5 (See Figure 5).    
+![mov_obs](GIFs/mov_obstacle_2_alpha_2.gif)    
+![mov_obs](GIFs/mov_obstacle_2_alpha_1.gif)  
+![mov_obs](GIFs/mov_obstacle_2_alpha_0.5.gif)  
+![fig4_2](Plots/scenario4_2_all.PNG)  
 
 **Failure scenario:** There are scenarios where the end-effector fails to reach
 the goal pose. One such scenario is presented in Figure 6 and the alpha value
 is set as 1.  
+![failure](GIFs/failure_alpha_1.gif)  
+![fig_f](Plots/scenario_f_all.PNG)  
